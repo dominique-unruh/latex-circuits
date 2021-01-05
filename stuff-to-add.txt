@@ -1,0 +1,42 @@
+From localvars.tex:
+
+
+% TODO: move to circuits.sty
+% TODO: document in circuits.tex
+\newcommand\crossWire[2]{
+  \draw[quantumWire] (\getWireCoord{#1}) to (\getWireCoord{#2} -| \currentXPos);
+}
+
+
+% TODO: move to circuits.sty
+% TODO: document in circuits.tex
+\tikzset{killWire/.style={%
+    gate={#1},
+    draw=none,
+    fill,
+    inner sep=0pt,
+    minimum width=.5mm, minimum height=3mm
+}}
+
+% TODO: move to circuits.sty
+% TODO: document in circuits.tex
+\tikzset{boxAround/.style={
+    draw, dotted,
+  }}
+
+\makeatletter
+
+% TODO: move to circuits.sty
+% TODO: document in circuits.tex
+\tikzset{boxAroundLabeled/.code={
+      \pgfkeysalso{boxAround}
+      \pgfkeysalso{
+        append after command={node[anchor=south west, inner xsep=0pt, inner ysep=1pt,
+                                   name={\@previous@nodeName-label},
+                                   at={(\@previous@nodeName.north west)}] {\tiny #1}}}
+      \appto\tikz@atend@node{\xdef\@previous@nodeName{\tikz@fig@name}}%
+    }
+  }
+
+
+
