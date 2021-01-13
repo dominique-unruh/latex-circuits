@@ -1,5 +1,7 @@
 From localvars.tex:
 
+% TODO: document \newWireRelative
+
 
 % TODO: move to circuits.sty
 % TODO: document in circuits.tex
