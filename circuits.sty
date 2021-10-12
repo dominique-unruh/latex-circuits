@@ -1,26 +1,3 @@
-%%% -*- buffer-read-only: t -*-
-%%% MAC=97fb80e4288fb99c7c0ae2da4c1831aaa6baafff
-%%% LEN=9389
-%%% CONTENT_SHA1=98fa80bc39cdeb542602d5eaca965c44b3cacf7a
-%%% 
-%%% 
-%%% 
-%%% *** WARNING ***
-%%% This is not the master copy of this file.
-%%% You can edit this copy, nothing bad will happen.
-%%% But it will prevent Dominique Unruh from automatically
-%%% transferring changes from the master copy to this copy.
-%%% Be prepared to answer to Dominique!
-%%% 
-%%% (If you are Dominique Unruh, disregard the above warning.)
-%%% 
-%%% 
-%%% 
-%%% 
-%%% Source: /home/unruh/svn/latex/circuits/circuits.sty
-%%% 
-%%% 
-%%% 
 \RequirePackage{tikz,etoolbox}
 
 
@@ -318,6 +295,10 @@
 }}
 
 
+% TODO: document in circuits.tex
+\newcommand\crossWire[2]{
+  \draw[quantumWire] (\getWireCoord{#1}) to (\getWireCoord{#2} -| \currentXPos);
+}
 
 
 % Local Variables:
