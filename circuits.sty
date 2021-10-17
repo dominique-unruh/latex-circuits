@@ -264,6 +264,8 @@
 \tikzset{cnot/.style={%
     gate={#1},
     circle,
+    inner sep=0pt,
+    minimum size=3mm,
     path picture={%
         \draw (path picture bounding box.south) -- (path picture bounding box.north)
               (path picture bounding box.west) -- (path picture bounding box.east);}
